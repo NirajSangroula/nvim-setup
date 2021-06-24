@@ -1,4 +1,4 @@
-Copy Nvim folder from https://drive.google.com/drive/folders/1C3QgR3peRZdw7Q0F21pA-uqKrIo3P-eK?usp=sharing<br>
+Copy Nvim folder from https://drive.google.com/drive/folders/1f-cnQ8tZQMEP4tQ2zpwMvuJmvL5_p4El?usp=sharing<br>
 to <b>C:/</b> drive
 <br><br>
 
@@ -6,7 +6,10 @@ Copy files inside of <b>nvim-setup</b> into C:/Users/{username}/AppData/Local/nv
 
 <ul>
 	<li>Install node.js https://nodejs.org/en/download/ </li>
-	<li></li>
+	<li>
+		To install vim-plug run <br><code>sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'</code><br>in powershell
+	</li>
 	<li>Install python3 and all vcredists from google drive folder. Do :checkhealth-provider and follow instructions to complete python3</li>
 	<li>Install ripgrep, maybe using choco in powershell<li>
 		<li>
@@ -15,8 +18,8 @@ Copy files inside of <b>nvim-setup</b> into C:/Users/{username}/AppData/Local/nv
 				<li>run <br><code>choco install ripgrep</code>
 		</ul>
 	</li>
-	<li>
-	</ul>
+	<li>Open nvim from C:/Nvim/bin and then run :PlugInstall</li>
+</ul>
 
 
 
