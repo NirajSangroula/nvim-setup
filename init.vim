@@ -15,7 +15,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 call plug#end()
-
+lua require("theprimeagen")
 let loaded_matchparen = 1
 let mapleader = " "
 
