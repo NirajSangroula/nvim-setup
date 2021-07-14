@@ -2,8 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
-"Plug 'neoclide/coc-highlight'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
@@ -12,16 +10,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'honza/vim-snippets'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'thomasfaingnaert/vim-lsp-snippets'
-Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
-
 lua require("theprimeagen")
 let loaded_matchparen = 1
 let mapleader = " "
@@ -53,11 +45,3 @@ nnoremap <leader>E <C-w>x<CR>
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
 vnoremap <leader>y "+y
-
-" Required for operations modifying multiple buffers like rename.
-set hidden
-au User lsp_setup call lsp#register_server({
-     \ 'name': 'psalm-language-server',
-     \ 'cmd': {server_info->[expand('vendor/bin/psalm-language-server')]},
-     \ 'allowlist': ['php'],
-     \ })
