@@ -5,3 +5,6 @@ or
 2. DejaVuSansMono NF
 
 in order for icons to work properly
+
+Or probably,
+ttf-* things in linuk
