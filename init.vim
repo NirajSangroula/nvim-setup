@@ -5,6 +5,7 @@ Plug 'flazz/vim-colorschemes'
 "Plug 'neoclide/coc-highlight'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-pathogen'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
 Plug 'nvim-lua/popup.nvim'
@@ -12,17 +13,20 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'honza/vim-snippets'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'thomasfaingnaert/vim-lsp-snippets'
-Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'mattn/vim-lsp-settings'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'thomasfaingnaert/vim-lsp-snippets'
+"Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'SirVer/ultisnips'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-lua/completion-nvim' 
+Plug 'honza/vim-snippets'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-lua require("theprimeagen")
 let loaded_matchparen = 1
 let mapleader = " "
 
@@ -56,8 +60,5 @@ vnoremap <leader>y "+y
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
-au User lsp_setup call lsp#register_server({
-     \ 'name': 'psalm-language-server',
-     \ 'cmd': {server_info->[expand('vendor/bin/psalm-language-server')]},
-     \ 'allowlist': ['php'],
-     \ })
+lua require("niraj")
+lua require("lsp")

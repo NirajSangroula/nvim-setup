@@ -31,7 +31,7 @@ require('telescope').setup{
       '--smart-case'
     },
     prompt_position = "bottom",
-    prompt_prefix = "> ",
+    prompt_prefix = "* ",
     selection_caret = "> ",
     entry_prefix = "  ",
     initial_mode = "insert",
@@ -69,4 +69,3 @@ require('telescope').setup{
   }
 }
 return M
-
