@@ -1,10 +1,12 @@
 <h1>
 Steps for setup
 </h1>
-1. Install neovim v-0.5
+<ol type="1">
+       <li>Install neovim v-0.5
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 mv nvim.appimage /usr/local/nvim
+       </li>
 2. go to ~/.config and 
 git clone https://github.com/NirajSangroula/nvim-setup
 3. For vim-plug,
