@@ -30,7 +30,7 @@ call plug#end()
 let loaded_matchparen = 1
 let mapleader = " "
 
-noremap <leader>ev :vsplit $MYVIMRC<cr>
+noremap <leader>ev :call EditConfig()<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap <C-n> <esc>jA
 inoremap <C-l> <right>
@@ -57,8 +57,15 @@ nnoremap <leader>E <C-w>x<CR>
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
 vnoremap <leader>y "+y
+cnoremap Q q
+cnoremap W w
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
 lua require("niraj")
 lua require("lsp")
+
+function EditConfig()
+    let configPath=expand('~').'/.config/nvim'
+    execute "edit ".configPath
+endfunction
