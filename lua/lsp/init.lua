@@ -1,6 +1,7 @@
 require("lsp.phpactor")
 require("lsp.ccls")
 require("lsp.vim-language-server")
+require("lsp.omnisharp")
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
