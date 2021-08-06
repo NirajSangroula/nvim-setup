@@ -25,6 +25,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-lua/completion-nvim' 
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
 let loaded_matchparen = 1
