@@ -60,7 +60,7 @@ nnoremap <leader>p "+p
 vnoremap <leader>y "+y
 cnoremap Q q
 cnoremap W w
-nnoremap <C-r> :!dotnet run<CR>
+nnoremap <leader>r :!dotnet run<CR>
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
