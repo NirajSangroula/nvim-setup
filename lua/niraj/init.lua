@@ -1,2 +1,2 @@
 require("niraj.telescope")
-require("niraj.compe-config")
+--require("niraj.compe-config")
