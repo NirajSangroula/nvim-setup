@@ -2,8 +2,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
-"Plug 'neoclide/coc-highlight'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-highlight'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-pathogen'
 Plug 'mbbill/undotree'
@@ -20,7 +20,7 @@ Plug 'sainnhe/gruvbox-material'
 "Plug 'thomasfaingnaert/vim-lsp-snippets'
 "Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'SirVer/ultisnips'
-Plug 'neovim/nvim-lspconfig'
+"Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-lua/completion-nvim' 
 Plug 'honza/vim-snippets'
@@ -71,3 +71,4 @@ function EditConfig()
     let configPath=expand('~').'/.config/nvim'
     execute "edit ".configPath
 endfunction
+
