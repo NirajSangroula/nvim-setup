@@ -2,8 +2,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
-"Plug 'neoclide/coc-highlight'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-highlight'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-pathogen'
 Plug 'mbbill/undotree'
@@ -15,17 +15,18 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 "Plug 'thomasfaingnaert/vim-lsp-snippets'
 "Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'SirVer/ultisnips'
-Plug 'neovim/nvim-lspconfig'
+"Plug 'neovim/nvim-lspconfig'
 "Plug 'hrsh7th/nvim-compe'
-"Plug 'nvim-lua/completion-nvim' 
+Plug 'nvim-lua/completion-nvim' 
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 let loaded_matchparen = 1

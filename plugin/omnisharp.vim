@@ -11,7 +11,7 @@ else
 endif
 
 " Tell ALE to use OmniSharp for linting C# files, and no other linters.
-let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:ale_linters = { 'cs': ['OmniSharp'], 'cshtml': ['omnisharp'] }
 
 augroup omnisharp_commands
   autocmd!
