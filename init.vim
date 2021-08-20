@@ -65,7 +65,7 @@ nnoremap <leader>r :!dotnet run<CR>
 " Required for operations modifying multiple buffers like rename.
 set hidden
 lua require("niraj")
-lua require("lsp")
+"lua require("lsp")
 
 function EditConfig()
     let configPath=expand('~').'/.config/nvim'
