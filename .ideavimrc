@@ -1,0 +1,44 @@
+set showmode
+set so=5
+set incsearch
+set nu
+
+" leader commands
+let mapleader=" "
+map <leader>of <Action>(GotoFile)
+map <C-f> <Action>(Find)
+map <C-h> <Action>(Replace)
+map // <Action>(SearchEverywhere)
+map <C-s> <Action>(SaveAll)
+map <leader>g <Action>(Generate)
+map <leader>s :source ~/_ideavimrc<CR>
+
+map <leader>r <Action>(Run)
+map <leader>rc <Action>(RunClass)
+
+"Useful shortcuts
+inoremap <C-CR> <esc>o
+noremap <leader>y "+y
+noremap <leader>p "+p
+
+noremap <C-w> :q<CR>
+
+"Move selection/code up/down
+map <leader>j <Action>(MoveStatementDown)
+map <leader>k <Action>(MoveStatementUp)
+
+"Refactoring commands
+map <leader>rr <Action>(RenameElement)
+map <leader>f <Action>(ReformatCode)
+
+map <leader>re <Action>(Floating.CodeToolbar.Extract)
+map <leader>rp <Action>(IntroduceParameter)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rc <Action>(IntroduceConstant)
+
+
+"Go to commands
+
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gu <Action>(FindUsages)
