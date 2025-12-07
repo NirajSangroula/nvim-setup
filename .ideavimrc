@@ -110,3 +110,5 @@ call MapGlobalMarks()
 
 " map <C-f> <Action>(Find) Remove this line later
 " map <C-f> <Action>(Replace)
+map <silent> <A-q> :q<CR>
+
