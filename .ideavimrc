@@ -6,12 +6,12 @@ set nu
 " leader commands
 let mapleader=" "
 map <leader>of <Action>(GotoFile)
-map <C-f> <Action>(Find)
-map <C-h> <Action>(Replace)
+" map <C-f> <Action>(Find)
+map <C-f> <Action>(Replace)
 map // <Action>(SearchEverywhere)
 map <C-s> <Action>(SaveAll)
 map <leader>g <Action>(Generate)
-map <leader>s :source ~/_ideavimrc<CR>
+map <leader>s :source ~/.ideavimrc<CR>
 
 map <leader>r <Action>(Run)
 map <leader>rc <Action>(RunClass)
@@ -21,11 +21,11 @@ inoremap <C-CR> <esc>o
 noremap <leader>y "+y
 noremap <leader>p "+p
 
-noremap <C-w> :q<CR>
+"noremap <C-w> :q<CR>
 
 "Move selection/code up/down
-map <leader>j <Action>(MoveStatementDown)
-map <leader>k <Action>(MoveStatementUp)
+map <C-j> <Action>(MoveStatementDown)
+map <C-k> <Action>(MoveStatementUp)
 
 "Refactoring commands
 map <leader>rr <Action>(RenameElement)
@@ -42,3 +42,71 @@ map <leader>rc <Action>(IntroduceConstant)
 map <leader>gd <Action>(GotoDeclaration)
 map <leader>gi <Action>(GotoImplementation)
 map <leader>gu <Action>(FindUsages)
+
+" Map Ctrl-t to switch to the alternate file
+nnoremap <C-t> <C-^>
+
+nnoremap <leader>yy "+yy
+nnoremap <leader>dd "+dd
+"Open files in Preview Tab => Perfect setting that I want
+" You can close the tab with middle click too...
+" Make Alt + P to show context actions : -> Like Alt Enter??
+" You can do 3gt, to go to tab numbered 1/2/3 etc... easily
+"
+" I don't need C-h --> For replace, so instead I can have C-f to do replace...
+" and Find also.. It works same...
+"
+"
+nnoremap <silent> <C-h> gT
+nnoremap <silent> <C-l> gt
+
+
+nnoremap <silent> <leader>1 :tabnext 1<CR>
+nnoremap <silent> <leader>2 :tabnext 2<CR>
+nnoremap <silent> <leader>3 :tabnext 3<CR>
+nnoremap <silent> <leader>4 :tabnext 4<CR>
+nnoremap <silent> <leader>5 :tabnext 5<CR>
+nnoremap <silent> <leader>6 :tabnext 6<CR>
+nnoremap <silent> <leader>7 :tabnext 7<CR>
+nnoremap <silent> <leader>8 :tabnext 8<CR>
+nnoremap <silent> <leader>9 :tabnext 9<CR>
+
+map <leader>u <Action>(Unsplit)
+map <leader>U <Action>(UnsplitAll)
+
+map <leader>H :split<CR>
+map <leader>V :vsplit<CR>
+
+map <leader>h <C-w>h
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>l <C-w>l
+
+map <leader>oe <Action>(ActivateProjectToolWindow)
+"Use <Alt+1> To toggle between
+
+map <A-CR> <Action>(ActivateTerminalToolWindow)
+
+"So use Alt + j and k... It's good..
+map <silent> <A-j> }
+map <silent> <A-k> {
+" use Shift + W and B to move between by escaping Punctuations...
+"
+"
+" Define a function to map lowercase marks to uppercase and g jumps
+function! MapGlobalMarks()
+  let letters = split('0123456789abcdefghijklmnopqrstuvwxyz', '\zs')
+  for l in letters
+    " Map lowercase mark creation to uppercase (global)
+    execute 'nmap m'.l 'm'.toupper(l)
+    " Map g + letter to jump to corresponding uppercase mark
+    execute 'nmap g'.l '´'.toupper(l)  " jump to line of mark
+    execute 'nmap <silent> g'.l '`'.toupper(l)
+  endfor
+endfunction
+
+" Call the function
+call MapGlobalMarks()
+
+" map <C-f> <Action>(Find) Remove this line later
+" map <C-f> <Action>(Replace)
